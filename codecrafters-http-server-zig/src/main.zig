@@ -2,12 +2,6 @@ const std = @import("std");
 const net = std.net;
 const stdout = std.io.getStdOut().writer();
 
-const Context = struct {
-    conn: std.net.Server.Connection,
-    alloc: std.mem.Allocator,
-    dirname: []u8,
-};
-
 const Arguments = struct { dir: []const u8 };
 
 const HttpRequest = struct {
